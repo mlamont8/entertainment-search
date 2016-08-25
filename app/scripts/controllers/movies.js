@@ -11,13 +11,14 @@
 angular.module('entsearchApp')
   .controller('MoviesCtrl', ['$scope', '$http',function ($scope, $http) {
     $scope.results = [];
-    $scope.search = function(){
-    	$http({
+  /*  $scope.search = function(){*/
+    return $http({
     		method: 'GET',
     		url: 'http://api.themoviedb.org/3/movie/popular',
+            cache: true,
     		params: {
-    			api_key: '21b0daca9dad79653c91d176b7930bee',
-    			text: $scope.searchTerm
+    			api_key: '21b0daca9dad79653c91d176b7930bee'
+    			
     		}
     	}).then(function successCallback(data){
     		$scope.results = data;
@@ -25,6 +26,6 @@ angular.module('entsearchApp')
     	}, function errorCallback(error){
     		console.error('error', error);
     	});
-    };
+   // };
 
   }]);
