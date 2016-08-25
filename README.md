@@ -1,12 +1,6 @@
-# entsearch
+# Entertainment Search
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+This app generates results using themoviedb.org api.
 
-## Build & development
+Built with Angularjs and Materializecss
 
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
