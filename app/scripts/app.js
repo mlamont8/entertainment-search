@@ -32,7 +32,8 @@ angular
   		})
   		 .state('tv', {
   			url: '/tv',
-  			templateUrl: '/views/tv.html'
+  			templateUrl: '/views/tv.html',
+        controller: 'TvCtrl as tvList'
   		})
   		 .state('about', {
   			url: '/about',

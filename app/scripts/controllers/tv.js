@@ -10,10 +10,9 @@
 angular.module('entsearchApp')
   .controller('TvCtrl', ['$scope', '$http',function ($scope, $http) {
     $scope.results = [];
-    $scope.search = function(){
-    	$http({
+    return $http({
     		method: 'GET',
-    		url: 'http://api.themoviedb.org/3/movie/popular',
+    		url: 'http://api.themoviedb.org/3/tv/popular',
     		params: {
     			api_key: '21b0daca9dad79653c91d176b7930bee'
     		}
@@ -23,6 +22,6 @@ angular.module('entsearchApp')
     	}, function errorCallback(error){
     		console.error('error', error);
     	});
-    };
+  /*  };*/
 
   }]);
