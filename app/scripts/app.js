@@ -42,6 +42,16 @@ angular
   		 .state('contact', {
   			url: '/contact',
   			templateUrl: '/views/contact.html'
-  		});
+  		})
+       .state('mdetail',{
+        url: '/moviedetail',
+        template: '/views/mdetail.html',
+        controller: 'mdetailcontroller as movieDetail'
+       })
+       .state('tdetail',{
+        url: '/tvshowdetail',
+        templateUrl: '/views/tdetail.html',
+        controller: 'tdetailcontroller as tvDetail'
+       });
 
   });
