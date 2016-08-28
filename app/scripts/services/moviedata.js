@@ -7,19 +7,23 @@
  * # movieData
  * Service in the entsearchApp.
  */
+
+ // Service to share movie id between mdetailcontroller and moviecontroller
 angular.module('entsearchApp')
   .service('movieData', function () {
-    // AngularJS will instantiate a singleton by calling "new" on this function
+ 
     var savedData = {};
-    function set(data){
-    	savedData = data;
-    }
-    function get(){
-    	return savedData;
-    }
+    savedData.data = false;
 
-    return{
-    	set: set,
-    	get: get
+    //sets data
+    savedData.set = function (data){
+        this.data = data;
+        };
+
+    //retrieves data
+    savedData.get = function(){
+    	return this.data;
     };
-  });
+    return savedData;
+
+   });

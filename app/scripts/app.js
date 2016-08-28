@@ -44,9 +44,9 @@ angular
   			templateUrl: '/views/contact.html'
   		})
        .state('mdetail',{
-        url: '/moviedetail',
+        url: '/movies',
         template: '/views/mdetail.html',
-        controller: 'Mdetailcontroller as movieDetail'
+        controller: 'mdetailcontroller as movieDetail'
        })
        .state('tdetail',{
         url: '/tvshowdetail',
