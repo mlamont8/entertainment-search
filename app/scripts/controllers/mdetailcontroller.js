@@ -8,10 +8,7 @@
  * Controller of the entsearchApp
  */
 angular.module('entsearchApp')
-  .controller('MdetailcontrollerCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('Mdetailcontroller', function (movieData) {
+    var sharedData=movieData;
+    console.log(sharedData);
   });

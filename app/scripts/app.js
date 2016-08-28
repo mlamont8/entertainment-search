@@ -46,7 +46,7 @@ angular
        .state('mdetail',{
         url: '/moviedetail',
         template: '/views/mdetail.html',
-        controller: 'mdetailcontroller as movieDetail'
+        controller: 'Mdetailcontroller as movieDetail'
        })
        .state('tdetail',{
         url: '/tvshowdetail',

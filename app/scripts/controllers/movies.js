@@ -9,7 +9,7 @@
  */
  // http://api.themoviedb.org/3/movie/popular?api_key=21b0daca9dad79653c91d176b7930bee&text=emerald
 angular.module('entsearchApp')
-  .controller('MoviesCtrl', ['$scope', '$http',function ($scope, $http) {
+  .controller('MoviesCtrl', ['$scope', '$http','movieData',function ($scope, $http, movieData) {
     $scope.results = [];
   /*  $scope.search = function(){*/
     return $http({
@@ -23,6 +23,7 @@ angular.module('entsearchApp')
     	}).then(function successCallback(data){
     		$scope.results = data;
     		console.log($scope.results);
+        movieData.set($scope.results);
     	}, function errorCallback(error){
     		console.error('error', error);
     	});
