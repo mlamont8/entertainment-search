@@ -7,15 +7,15 @@
 </div>
 <!-- Display Grid -->
 <div class="row">
-	 <div ng-repeat = "tv in results.data.results" class="col s6 m3">
+	 <div ng-repeat = "tv in results.data.results" class="col s6 m2">
           <div class="card medium">
             <div class="card-image">
               <img ng-src="http://image.tmdb.org/t/p/w185/{{tv.poster_path}}">
               
             </div>
             <div class="card-content">
-            	<span class="tv-title">{{tv.original_title}}</span>
-              <p>{{tv.overview}}</p>
+            	<span class="tv-title">{{tv.name}}</span>
+              <p>{{tv.vote_average}} of 10</p>
             </div>
 <!--             <div class="card-action">
   <a href="#">This is a link</a>
