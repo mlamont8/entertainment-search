@@ -1,3 +1,25 @@
-<a ui-sref='movies'><p>Return Back</p></a>
+<div class="container">
+	<div class="row">
+		<i class="mi mi-arrow-back"></i><a ui-sref='movies'><p>Go Back</p></a>
+	</div>
+	<div class="row">
+		<!-- Poster -->
+		<div class="posterContainer col s12 m3">
+	<img ng-src="http://image.tmdb.org/t/p/w185/{{results.data.poster_path}}" class="responsive-image">
+</div>
+<!-- <div class="col s9 backgrd" ng-style="{'background-image':'url(http://image.tmdb.org/t/p/w30'+results.data.backdrop_path+')'}"> -->
+	<div class="col s12 m9">
+	<!-- Title -->
+	<span class="title">
+		<h3>{{results.data.original_title}}</h3>
+	</span>
+	<span class="description">{{results.data.overview}}</span>
+	<span class="homepage"><a ng-href="{{results.data.homepage}}">HOMEPAGE</a></span>
 
-test
+</div>
+</div>
+<div class="row">
+<div class="divider"></div>
+<div class="col s12 backgrd" ng-style="bgImage"></div>
+</div>
+</div>
