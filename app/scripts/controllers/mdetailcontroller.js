@@ -23,11 +23,7 @@ angular.module('entsearchApp')
     		}
     	}).then(function successCallback(data){
     		$scope.results = data;
-        $scope.bgImage = {
-        background: 'url(http://image.tmdb.org/t/p/w300' + data.data.backdrop_path +')'
-      };
- //   		console.log(data.data.results[0].id);
-  //      movieData.set($scope.results);
+        
     	}, function errorCallback(error){
     		console.error('error', error);
     	});

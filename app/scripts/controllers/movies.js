@@ -28,8 +28,7 @@ angular.module('entsearchApp')
     		}
     	}).then(function successCallback(data){
     		$scope.results = data;
- //   		console.log(data.data.results[0].id);
-  //      movieData.set($scope.results);
+ //   	
     	}, function errorCallback(error){
     		console.error('error', error);
     	});

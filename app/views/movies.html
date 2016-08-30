@@ -7,20 +7,17 @@
 </div>
 <!-- Display Grid -->
 <div class="row">
-	 <div ng-repeat = "movie in results.data.results" class="col s6 m3">
+	 <div ng-repeat = "movie in results.data.results" class="col s6 m2">
     <a ui-sref="mdetail" ng-click="share(movie.id)">
           <div class="card medium">
             <div class="card-image">
               <img ng-src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}">
               
             </div>
-            <div class="card-content">
-            	<span class="movie-title">{{movie.original_title}}</span>
-              <p>{{movie.overview}}</p>
+            <div class="card-panel teal" >
+              <span class=" white-text movie-title"><h6>{{movie.original_title}}</h6></span>
+              <p class="black-text">{{movie.vote_average}} of 10</p>
             </div>
-<!--             <div class="card-action">
-  <a href="#">This is a link</a>
-</div> -->
           </div>
         </a>
         </div>
