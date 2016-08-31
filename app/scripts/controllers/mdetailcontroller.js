@@ -8,8 +8,8 @@
  * Controller of the entsearchApp
  */
 angular.module('entsearchApp')
-  .controller('mdetailcontroller', ['$scope', '$http', 'movieData',function ($scope, $http, movieData) {
-    var sharedData=movieData.get();
+  .controller('mdetailcontroller', ['$scope', '$http', 'idData',function ($scope, $http, idData) {
+    var sharedData=idData.get();
 
      $scope.results = [];
   // Returns movie data based on movie id

@@ -8,9 +8,14 @@
  * Controller of the entsearchApp
  */
 angular.module('entsearchApp')
-  .controller('TvCtrl', ['$scope', '$http',function ($scope, $http) {
+  .controller('TvCtrl', ['$scope','$http','idData',function ($scope, $http, idData) {
+   // function to send id to tv detail controller
+   $scope.share = function(id){
+    idData.set(id);
+   };
     $scope.results = [];
-    return $http({
+    // Returns popular tv shows on page load
+    $http({
     		method: 'GET',
     		url: 'http://api.themoviedb.org/3/tv/popular',
     		params: {
