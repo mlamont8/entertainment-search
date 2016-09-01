@@ -19,9 +19,23 @@
 .tvsection{
 	height: 100px;
 }
-.popularPlayingNow, .card{
+.mostPopular, .card{
 	border: 0;
 	margin: 0 !important;
 	padding: 0 !important;
+	}
+
+.rightMain{
 	height: 50px;
+	vertical-align: top;
+}
+.row {
+	border-style: solid;
+	border-color: red;
+}
+
+section .row{
+	height: 350px;
+	border: 0;
+	padding: 0;
 }

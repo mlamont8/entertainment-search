@@ -9,11 +9,10 @@
  */
 angular.module('entsearchApp')
   .controller('MainCtrl', ['$scope','$http',function($scope, $http){
-  	$scope.date = new Date();
   	$scope.airToday = [];
   	$http({
     		method: 'GET',
-    		url: 'http://api.themoviedb.org/3/tv/airing_today',
+    		url: 'http://api.themoviedb.org/3/tv/popular',
             cache: true,
     		params: {
     			api_key: '21b0daca9dad79653c91d176b7930bee',

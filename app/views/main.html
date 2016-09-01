@@ -1,10 +1,9 @@
 
-<div class="date">{{date | date:'EEEE, MMMM d, y h:mma'}}</div>
 <div class="divider"></div>
 <section class="tvsection">
-  <div class="row popularPlayingNow">
+  <div class="row mostPopular">
     <!-- Main On Tv tonight result -->
-<div class="popularPlayingNow col s12 m6"> 
+<div class="mostPopular col s12 m6"> 
 <div class="card">
             <div class="card-image">
               <img ng-src="http://image.tmdb.org/t/p/w780{{airToday.data.results[0].backdrop_path}}">
@@ -12,6 +11,7 @@
             </div>
 </div>
 </div>
+<div class="mostPopular col s12 m6">
 <!-- Right side results -->
 <!-- <div class="popularPlayingNow col s6 m3"> 
 <div class="card">
@@ -21,14 +21,28 @@
             </div>
 </div>
 </div> -->
-<!-- <div ng-repeat="result in airToday.data.results | limitTo:4:1" class="popularPlayingNow col s6 m3"> 
+<!-- First Row Right Side -->
+<div class="row">
+<div ng-repeat="result in airToday.data.results | limitTo:2:1" class="mostPopular col s6 m6"> 
 <div class="card">
             <div class="card-image">
               <img ng-src="http://image.tmdb.org/t/p/w780{{result.backdrop_path}}">
               <span class="card-title">{{result.name}}</span>
             </div>
 </div>
-</div> -->
+</div>
+</div>
+<div class="row">
+  <!-- Second Row Right Side -->
+<div ng-repeat="result in airToday.data.results | limitTo:2:3" class="mostPopular col s6 m6"> 
+<div class="card">
+            <div class="card-image">
+              <img ng-src="http://image.tmdb.org/t/p/w780{{result.backdrop_path}}">
+              <span class="card-title">{{result.name}}</span>
+            </div>
+</div>
+</div>
+</div>
 
-
+</div>
 </section>
