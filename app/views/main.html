@@ -1,47 +1,17 @@
 
 <div class="divide col s12 indigo darken-3">
- 
+ <div><h2 class="white-text">Most Popular TV Shows</h2></div>
 </div>
+<!-- Most Popular Tv Shows Section -->
 <section class="tvsection">
   <div class="row mostPopularFull">
-    <!-- Large Left result -->
-<!-- <div class="leftContainer imgBlock col s12 m6"> 
-  <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w780{{airToday.data.results[0].backdrop_path}}">
-    <h3>{{airToday.data.results[0].name}}</h3>
-   
- </div>
-Right side results
-<div class="rightContainer col s12 m6">
-
-First Row Right Side
-<div class="row rightTop">
-  <div ng-repeat="result in airToday.data.results | limitTo:2:1" class="imgBlock col s6 m6"> 
-  <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w780{{result.backdrop_path}}">
-    <h3>{{result.name}}</h3>
-   
- </div>
-</div>
-
- <div class="row rightBottom">
-  <div ng-repeat="result in airToday.data.results | limitTo:2:3" class="imgBlock col s6 m6"> 
-  <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w780{{result.backdrop_path}}">
-    <h3>{{result.name}}</h3>
-   
- </div>
-</div>
-
-
-
-
-</div> -->
-<!-- Next Try -->
 <!-- Large Left result -->
 <div class="leftContainer imgBlock col s12 m6"> 
   <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w780{{airToday.data.results[0].backdrop_path}}">
     <h3>{{airToday.data.results[0].name}}</h3>
    
  </div>
- <!-- Right side -->
+ <!-- Right side grid -->
  <div class="rightContainer col s12 m6">
    <div ng-repeat="result in airToday.data.results | limitTo:4:1" class="imgBlock col s6 m6"> 
   <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w780{{result.backdrop_path}}">
@@ -51,9 +21,41 @@ First Row Right Side
 </div>
 
 
- </div>
+ </div> 
+<!-- End Row  -->
 
 
+
+</section>
+<!-- End Section -->
+
+
+<!-- Most Popular Tv Shows Section -->
+<section class="mainMovies">
+  <div class="container">
+<!-- Left Section -->
+<div class="leftContent col s12 m8 left">
+  <div class="innerLeft col s12 m7">
+    <div class="card">
+            <div class="card-image">
+              <img src="http://placehold.it/350x350">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+  </div>
 
 </div>
+
+
+<!-- Inner Right section -->
+<div class="innerRight col s12 m5"></div>
+
+</div>
+<!-- Right Section -->
+<div class="col s12 m4"></div>
+</div>
 </section>
+<!-- End Section -->
