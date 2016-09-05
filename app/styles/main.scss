@@ -37,10 +37,13 @@
 	}
 
 
-.innerRight {
+.innerRight,
+.item-thumbnail,
+.item-wrapper
+ {
 	border-style: solid;
 	border-color: red;
-	height: 200px;
+	
 }
 
 /* section .row{
