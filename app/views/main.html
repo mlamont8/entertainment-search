@@ -30,21 +30,21 @@
 <!-- End Section -->
 
 
-<!-- Most Popular Tv Shows Section -->
+<!-- Upcoming Movies Section -->
 <section class="mainMovies">
   <div class="container row">
 <!-- Left Section -->
 <div class="leftContent col s12 m8 left">
   <!-- Inner Left -->
-  <div class="innerLeft col s12 m7">
+  <div class="innerLeft col s12 m6">
     <div class="card">
             <div class="card-image">
-              <img src="http://placehold.it/350x350">
-              <span class="card-title">Card Title</span>
+              <img ng-src="http://image.tmdb.org/t/p/w342{{comingSoon.data.results[0].poster_path}}">
+              
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <h3>{{comingSoon.data.results[0].title}}</h3>
+              <p>{{comingSoon.data.results[0].overview}}</p>
             </div>
   </div>
 
@@ -53,14 +53,14 @@
 
 
 <!--  Inner Right  -->
-<div class="innerRight col s12 m5">
+<div class="innerRight col s12 m6">
  
   <ul>
-    <li>
+    <li ng-repeat="movie in comingSoon.data.results | limitTo:4:1">
       <!-- thumbnail -->
        <div class="col s12 item-wrapper row">
       <div class="item-thumbnail col s3 left">
-        <img class="responsive-img" src="http://placehold.it/80x80">
+        <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w92{{movie.poster_path}}">
       </div>
       <!-- header -->
       <div class="item-content col s9 left">
@@ -72,24 +72,12 @@
 
   
 
-<!--test for 2  -->
 
-    <li>
-      <!-- thumbnail -->
-           <div class="col s12 item-wrapper row">  
-      <div class="item-thumbnail col s3 left">
-        <img class="responsive-img" src="http://placehold.it/80x80">
-      </div>
-      <!-- header -->
-      <div class="item-content col s9 left">
-        <h2>Title</h2>
-        <div class="item-date">12-12-2016</div>
-      </div>
-      </div>
-    </li>
+
+
 </ul>
 </div>
-<!-- end of test -->
+
 
 </div>
 <!-- End of Inner Right -->
