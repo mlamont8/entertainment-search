@@ -13,7 +13,7 @@ angular.module('entsearchApp')
     	console.log(sharedData);
      $scope.results = [];
   // Returns movie data based on movie id
-    return $http({
+    $http({
     		method: 'GET',
     		url: 'http://api.themoviedb.org/3/tv/'+ sharedData,
             cache: true,

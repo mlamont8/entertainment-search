@@ -1,13 +1,8 @@
 <div class="container">
-	<!-- Search Form -->
-<div class="row center-align">
-	<form ng-submit="search()">
-		<input placeholder="Search for" id="movieSearch" type="text" class="validate" ng-model="searchTerm">
-  </form>
-</div>
+
 <!-- Display Grid -->
 <div class="row">
-  <h4>Most Popular Movies</h4>
+  <h4>Popular Movies</h4>
 	 <div ng-repeat = "movie in results.data.results" class="col s6 m2">
     <a ui-sref="mdetail" ng-click="share(movie.id)">
           <div class="card medium">
@@ -15,9 +10,8 @@
               <img ng-src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}">
               
             </div>
-            <div class="card-panel teal" >
-              <span class=" white-text movie-title"><h6>{{movie.original_title}}</h6></span>
-              <p class="black-text">{{movie.vote_average}} of 10</p>
+            <div class="card-panel indigo" >
+              <p class="overview white-text">{{movie.overview | limitTo:60}}{{movie.overview.length > 60 ? '&hellip;' : ''}}</p>
             </div>
           </div>
         </a>
