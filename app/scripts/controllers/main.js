@@ -11,6 +11,8 @@ angular.module('entsearchApp')
   .controller('MainCtrl', ['$scope','$http',function($scope, $http){
   	$scope.airToday = [];
     $scope.comingSoon = [];
+    $scope.onTV = [];
+    // Popular TV Shows
   	$http({
     		method: 'GET',
     		url: 'http://api.themoviedb.org/3/tv/popular',
@@ -22,11 +24,11 @@ angular.module('entsearchApp')
     	}).then(function successCallback(data){
     		$scope.airToday = data;
     		console.log(data);
- //   	
+   	
     	}, function errorCallback(error){
     		console.error('error', error);
     	});
-
+// Upcoming Movies
     $http({
         method: 'GET',
         url: 'http://api.themoviedb.org/3/movie/upcoming',
@@ -38,11 +40,26 @@ angular.module('entsearchApp')
       }).then(function successCallback(data){
         $scope.comingSoon = data;
         console.log(data);
- //     
+     
       }, function errorCallback(error){
         console.error('error', error);
       });
-
+//  On TV
+    $http({
+        method: 'GET',
+        url: 'http://api.themoviedb.org/3/tv/on_the_air',
+            cache: true,
+        params: {
+          api_key: '21b0daca9dad79653c91d176b7930bee'
+          
+        }
+      }).then(function successCallback(data){
+        $scope.onTV = data;
+        console.log(data);
+      
+      }, function errorCallback(error){
+        console.error('error', error);
+      });
 
 
 
