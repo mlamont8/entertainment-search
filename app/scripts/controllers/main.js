@@ -8,10 +8,14 @@
  * Controller of the entsearchApp
  */
 angular.module('entsearchApp')
-  .controller('MainCtrl', ['$scope','$http',function($scope, $http){
+  .controller('MainCtrl', ['$scope','$http', 'idData',function($scope, $http, idData){
   	$scope.airToday = [];
     $scope.comingSoon = [];
     $scope.onTV = [];
+       $scope.share = function(id){
+        console.log(id);
+        idData.set(id);
+ };
     // Popular TV Shows
   	$http({
     		method: 'GET',

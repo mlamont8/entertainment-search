@@ -41,6 +41,7 @@
 <div class="leftContent col s12 m8 left">
   <!-- Inner Left -->
   <div class="innerLeft col s12 m6">
+    <a ui-sref="mdetail" ng-click="share(comingSoon.data.results[0].id)">
     <div class="card">
             <div class="card-image">
               <img ng-src="http://image.tmdb.org/t/p/w342{{comingSoon.data.results[0].poster_path}}">
@@ -52,7 +53,7 @@
               <p>{{comingSoon.data.results[0].overview | limitTo: 200}}{{comingSoon.data.results[0].overview.length > 200 ? '&hellip;' : ''}}</p>
             </div>
   </div>
-
+</a>
 </div>
 
 
