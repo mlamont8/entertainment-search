@@ -10,8 +10,7 @@
 angular.module('entsearchApp')
   .controller('tdetailcontroller', ['$scope', '$http', 'idData',function ($scope, $http, idData) {
     var sharedData=idData.get();
-    	console.log(sharedData);
-     $scope.results = [];
+      $scope.results = [];
   // Returns movie data based on movie id
     $http({
     		method: 'GET',
@@ -23,9 +22,10 @@ angular.module('entsearchApp')
     		}
     	}).then(function successCallback(data){
     		$scope.results = data;
+
+
         
     	}, function errorCallback(error){
     		console.error('error', error);
     	});
-
    }]);

@@ -23,32 +23,27 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
+   <!-- Navbar -->
 <nav class="indigo darken-4">
   <div class="nav-wrapper">
     <a ui-href="#" class="brand-logo">Entertainment Search</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
-      <li ng-class="{ active: isActive('/movies')}"><a href="/movies">Movies</a></li>
-     <li ng-class="{ active: isActive('/tv')}"><a href="/tv">TV Shows</a></li>
+    <ul id="nav-mobile" class="right hide-on-med-and-down white-text">
+      <li ng-class="{ active: isActive('/')}"><a class="white-text" href="/">Home</a></li>
+      <li ng-class="{ active: isActive('/movies')}"><a  class="white-text" href="/movies">Movies</a></li>
+     <li ng-class="{ active: isActive('/tv')}"><a class="white-text" href="/tv">TV Shows</a></li>
   </div>
 </nav>
+<!-- End Navbar -->
 
   <div ui-view></div>
 
-        <footer class="page-footer">
+<!-- Footer -->
+  <footer class="page-footer">
   <div class="container">
     <div class="row">
-      <div class="col l4 s12 footerArea">
+      <div class="col l4 s12 footerArea right">
  
         <img class="poweredBy responsive-img" src="/images/poweredbytmdb.png"> 
-      </div>
-      <div class="col l4 offset-l4 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-          </ul>
       </div>
     </div>
   </div>

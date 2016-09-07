@@ -45,12 +45,12 @@ angular
   			templateUrl: '/views/contact.html'
   		})
        .state('mdetail',{
-        url: '/movies',
+        url: '/moviedetail',
         templateUrl: '/views/mdetail.html',
         controller: 'mdetailcontroller as movieDetail'
        })
        .state('tdetail',{
-        url: '/tvshowdetail',
+        url: '/tvshowdetail/',
         templateUrl: '/views/tdetail.html',
         controller: 'tdetailcontroller as tvDetail'
        });

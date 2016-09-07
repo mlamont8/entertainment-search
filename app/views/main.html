@@ -4,18 +4,21 @@
 </div>
 <!-- Most Popular Tv Shows Section -->
 <section class="tvsection">
+  <div class="container">
   <div class="row mostPopularFull">
-<!-- Large Left result -->
+<!-- Large Left result on top-->
 <div class="leftContainer imgBlock col s12 m5"> 
-  
+  <a ui-sref="tdetail" ng-click="share(airToday.data.results[0].id)">
   <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w780{{airToday.data.results[0].backdrop_path}}">
     <h3>{{airToday.data.results[0].name}}</h3>
-   
+   </a>
  </div>
- <!-- Right side grid -->
+ <!-- Right side grid on top -->
  <div class="rightContainer col s12 m7">
-   <div ng-repeat="result in airToday.data.results | limitTo:4:1" class="imgBlock col s6 m6"> 
+   <div ng-repeat="result in airToday.data.results | limitTo:4:1" class="imgBlock col s6 m6 repeat-list-item">
+   <a ui-sref="tdetail" ng-click="share(result.id)"> 
   <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w780{{result.backdrop_path}}">
+</a>
     <h3>{{result.name}}</h3>
    
  </div>
@@ -26,7 +29,7 @@
 <!-- End Row  -->
 
 
-
+</div>
 </section>
 <!-- End Section -->
 
@@ -62,10 +65,13 @@
 <div class="innerRight col s12 m6">
  
   <ul>
-    <li ng-repeat="movie in comingSoon.data.results | limitTo:8:1">
+    <li ng-repeat="movie in comingSoon.data.results | limitTo:8:1"  class="repeat-list-item">
+        <a ui-sref="mdetail" ng-click="share(movie.id)">
       <!-- thumbnail -->
+
        <div class="col s12 item-wrapper row z-depth-2">
       <div class="item-thumbnail col s3 left">
+
         <img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w92{{movie.poster_path}}" onerror="this.src='/images/movietv.png'">
       </div>
       <!-- header -->
@@ -74,6 +80,7 @@
         <div class="item-date">Release Date: {{movie.release_date | date:'shortDate'}}</div>
         </div>
       </div>
+    </a>
     </li>
 
   
@@ -94,6 +101,7 @@
   </div>
    <ul>
     <li ng-repeat="tv in onTV.data.results | limitTo:7:1">
+        <a ui-sref="tdetail" ng-click="share(tv.id)">
       <!-- thumbnail -->
        <div class="col s12 item-wrapper row z-depth-2">
       <div class="item-thumbnail col s3 left">
@@ -105,6 +113,7 @@
         <div class="item-date">Rating: {{tv.vote_average}} of 10</div>
         </div>
       </div>
+    </a>
     </li>
 
   

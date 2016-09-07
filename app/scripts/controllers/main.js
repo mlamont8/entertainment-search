@@ -13,7 +13,6 @@ angular.module('entsearchApp')
     $scope.comingSoon = [];
     $scope.onTV = [];
        $scope.share = function(id){
-        console.log(id);
         idData.set(id);
  };
     // Popular TV Shows
