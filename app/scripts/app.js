@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'angular-loading-bar'
   ])
   .config(function($locationProvider,$stateProvider, $urlRouterProvider){
   	$locationProvider.html5Mode(true);
@@ -36,15 +37,7 @@ angular
   			templateUrl: '/views/tv.html',
         controller: 'TvCtrl as tvList'
   		})
-  		 .state('about', {
-  			url: '/about',
-  			templateUrl: '/views/about.html'
-  		})
-  		 .state('contact', {
-  			url: '/contact',
-  			templateUrl: '/views/contact.html'
-  		})
-       .state('mdetail',{
+  		  .state('mdetail',{
         url: '/moviedetail',
         templateUrl: '/views/mdetail.html',
         controller: 'mdetailcontroller as movieDetail'

@@ -12,6 +12,14 @@
   padding: 0.2em 0;
 }
 
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+ main {
+    flex: 1 0 auto;
+  }
 .container{
 	width: 90%;
 }
@@ -42,21 +50,18 @@ a:visited{
 	}
 
 
-/* 
-.item-wrapper
- {
-	border-style: solid;
-	border-color: red;
-	
-} */
 
-/* section .row{
-	height: 350px;
-	border: 0;
-	padding: 0;
-} */
+.item-date,
+.item-rating
+ {
+	padding-bottom: 10px;
+	
+}
+
+
 .mostPopularFull {
 	height: 350px;
+	width: 100%;
 
 }
 
@@ -91,13 +96,7 @@ h2{
 	font-weight: 500;
 	padding-top: 3px;
 }
-/* .rightTop, .rightBottom{
-	padding: 0 !important;
-	margin: 0 !important;
-	margin-bottom: 0 !important;
-	height:175px;
-}
- */
+
 
 .imgBlock{
 	padding: 0 !important;
@@ -112,7 +111,9 @@ h2{
 }
 .mainMovies {
 	padding-top: 40px;
+	
 }
+
 .item-title{
 	padding-top: 20px;
 }
@@ -138,9 +139,15 @@ h2{
 }
 .page-footer{
 	background-color: $primary-color !important;
+	
+	  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
 }
-.nav-wrapper{
+.nav-wrapper, #nav-mobile{
 	background-color: $lighterBlue;
+	height: 64px;
 }
 .overview{
 	font-size: 12px;
@@ -155,7 +162,7 @@ h2{
 .repeat-list-item.ng-enter,
 .repeat-list-item.ng-leave,
 .repeat-list-item.ng-move {
-  transition: 0.3s linear all;
+  transition: 0.1s linear all;
 }
 
 .repeat-list-item.ng-enter,
@@ -202,4 +209,20 @@ h2{
 
 .crumb{
 	height: 30px !important;
+}
+
+.large-image{
+	    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+
+}
+
+.top-right-images{
+/* 		    height: auto;
+    max-width: 100%; */
+    object-fit: cover;
+}
+.tagline{
+	font-style: italic;
 }
