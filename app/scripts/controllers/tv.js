@@ -13,6 +13,7 @@ angular.module('entsearchApp')
    $scope.share = function(id){
     idData.set(id);
    };
+   $scope.searching=false;
     $scope.results = [];
     // Returns popular tv shows on page load
     $http({
@@ -27,6 +28,26 @@ angular.module('entsearchApp')
     	}, function errorCallback(error){
     		console.error('error', error);
     	});
-  /*  };*/
+// Search function
+ $scope.search = function(){
+  $scope.searching= true;
+  $scope.results = [];
+  $http({
+    method: 'GET',
+    url: 'http://api.themoviedb.org/3/search/tv',
+    params: {
+      api_key: '21b0daca9dad79653c91d176b7930bee',
+      query: $scope.searchTerm
+    }
+
+  }).then(function successCallback(data){
+    $scope.results= data;
+
+
+  },function errorCallback(){
+    console.error('error');
+  }
+  );
+ };
 
   }]);

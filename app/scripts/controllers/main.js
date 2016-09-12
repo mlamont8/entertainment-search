@@ -26,8 +26,7 @@ angular.module('entsearchApp')
     		}
     	}).then(function successCallback(data){
     		$scope.airToday = data;
-    		console.log(data);
-   	
+  
     	}, function errorCallback(error){
     		console.error('error', error);
     	});
@@ -42,7 +41,7 @@ angular.module('entsearchApp')
         }
       }).then(function successCallback(data){
         $scope.comingSoon = data;
-        console.log(data);
+       
      
       }, function errorCallback(error){
         console.error('error', error);
@@ -58,7 +57,7 @@ angular.module('entsearchApp')
         }
       }).then(function successCallback(data){
         $scope.onTV = data;
-        console.log(data);
+     
       
       }, function errorCallback(error){
         console.error('error', error);

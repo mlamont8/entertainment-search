@@ -7,27 +7,47 @@
       <li><a class="white-text" href="/">Home</a></li>
       <li><a  class="white-text" href="/movies">Movies</a></li>
      <li class="active"><a class="white-text" href="/tv">TV Shows</a></li>
-    <li><a href="/search"><i class="material-icons">search</i></a></li>
-  </ul>
+    </ul>
   </div>
 </nav>
 </header>
 <!-- End Navbar -->
 
 <div class="container">
+  <!-- Search Form -->
+  <div class="search-form row">
+    <form class="col s12" ng-submit="search()">
+    <div class="row">
+      <!-- Input Field -->
+      <div class="inputField col s6">
+      <input placeholder = "Search for" id="searchInput" type="text" ng-model="searchTerm">
+    </div>
 
+    </div>
+
+   
+
+  </form>
+<!-- End Form -->
+
+
+
+
+</div>
 
 <!-- Display Grid -->
 <div class="row">
-  <h4>Popular TV Shows</h4>
+ <h4 ng-if="!searching">Popular TV Shows</h4>
+  <h4 ng-if="searching">Search Results</h4>
 	 <div ng-repeat = "tv in results.data.results" class="col s6 m2 repeat-list-item">
     <a ui-sref="tdetail" ng-click="share(tv.id)">
           <div class="card medium">
             <div class="card-image">
-              <img ng-src="http://image.tmdb.org/t/p/w185/{{tv.poster_path}}">
+              <img class="innerImage" ng-src="http://image.tmdb.org/t/p/w185/{{tv.poster_path}}" onerror="this.src='/images/movietv.png'">
               
             </div>
             <div class="card-panel indigo">
+              <span>{{tv.name}}</span>
             	<p class="overview white-text">{{tv.overview | limitTo:60}}{{tv.overview.length > 60 ? '&hellip;' : ''}}</p>
             </div>
           </div>

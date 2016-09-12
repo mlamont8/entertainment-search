@@ -17,7 +17,7 @@
 	<div class="row">
 		<!-- Poster -->
 		<div class="posterContainer col s12 m3">
-	<img ng-src="http://image.tmdb.org/t/p/w185/{{results.data.poster_path}}" class="responsive-image">
+	<img ng-src="http://image.tmdb.org/t/p/w185/{{results.data.poster_path}}" class="responsive-image" onerror="this.src='/images/movietv.png'">
 </div>
 
 	<div class="col s12 m9">
@@ -39,7 +39,7 @@
 
 <div class="row">
 <!-- bottom image -->
-<div class="col s12 moviefoot"><img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w1280{{results.data.backdrop_path}}"></div>
+<div class="col s12 moviefoot"><img class="responsive-img" ng-src="http://image.tmdb.org/t/p/w1280{{results.data.backdrop_path}}" onerror="this.src='/images/movietv.png'"></div>
 </div>
 
 
