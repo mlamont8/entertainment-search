@@ -15,7 +15,7 @@ angular.module('entsearchApp')
   // Returns movie data based on movie id
    $http({
     		method: 'GET',
-    		url: 'http://api.themoviedb.org/3/movie/'+ sharedData,
+    		url: 'https://api.themoviedb.org/3/movie/'+ sharedData,
             cache: true,
     		params: {
     			api_key: '21b0daca9dad79653c91d176b7930bee'

@@ -16,7 +16,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'angular-loading-bar'
+    'angular-loading-bar',
+    'ui.materialize'
   ])
   .config(function($locationProvider,$stateProvider, $urlRouterProvider){
   	$locationProvider.html5Mode(true);

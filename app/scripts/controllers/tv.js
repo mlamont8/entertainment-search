@@ -18,7 +18,7 @@ angular.module('entsearchApp')
     // Returns popular tv shows on page load
     $http({
     		method: 'GET',
-    		url: 'http://api.themoviedb.org/3/tv/popular',
+    		url: 'https://api.themoviedb.org/3/tv/popular',
     		params: {
     			api_key: '21b0daca9dad79653c91d176b7930bee'
     		}
@@ -34,7 +34,7 @@ angular.module('entsearchApp')
   $scope.results = [];
   $http({
     method: 'GET',
-    url: 'http://api.themoviedb.org/3/search/tv',
+    url: 'https://api.themoviedb.org/3/search/tv',
     params: {
       api_key: '21b0daca9dad79653c91d176b7930bee',
       query: $scope.searchTerm

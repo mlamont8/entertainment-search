@@ -15,10 +15,11 @@ angular.module('entsearchApp')
        $scope.share = function(id){
         idData.set(id);
  };
+ 
     // Popular TV Shows
   	$http({
     		method: 'GET',
-    		url: 'http://api.themoviedb.org/3/tv/popular',
+    		url: 'https://api.themoviedb.org/3/tv/popular',
             cache: true,
     		params: {
     			api_key: '21b0daca9dad79653c91d176b7930bee',
@@ -33,7 +34,7 @@ angular.module('entsearchApp')
 // Upcoming Movies
     $http({
         method: 'GET',
-        url: 'http://api.themoviedb.org/3/movie/upcoming',
+        url: 'https://api.themoviedb.org/3/movie/upcoming',
             cache: true,
         params: {
           api_key: '21b0daca9dad79653c91d176b7930bee'
@@ -49,7 +50,7 @@ angular.module('entsearchApp')
 //  On TV
     $http({
         method: 'GET',
-        url: 'http://api.themoviedb.org/3/tv/on_the_air',
+        url: 'https://api.themoviedb.org/3/tv/on_the_air',
             cache: true,
         params: {
           api_key: '21b0daca9dad79653c91d176b7930bee'
