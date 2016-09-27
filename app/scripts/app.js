@@ -28,11 +28,7 @@ angular
   			templateUrl: '/views/main.html',
         controller: 'MainCtrl as mainPage'
   		})
-      .state('search', {
-        url: '/search',
-        templateUrl: '/views/search.html',
-        controller: 'SearchCtrl as searchList'
-      })
+
   		.state('movies', {
   			url: '/movies',
   			templateUrl: '/views/movies.html',

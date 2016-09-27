@@ -4,6 +4,7 @@
  $primary-color: #1a237e;
  $lighterBlue: #3949ab;
  $white: #fff;
+ $black: #000;
 ;
 .browsehappy {
   margin: 0.2em 0;
@@ -16,6 +17,7 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: $black;
   }
  main {
     flex: 1 0 auto;
@@ -56,6 +58,11 @@ a:visited{
  {
 	padding-bottom: 10px;
 	
+}
+.item-wrapper
+{
+	background: $white;
+	border-radius: 2px;
 }
 
 
@@ -117,12 +124,12 @@ h2{
 .item-title{
 	padding-top: 20px;
 }
-/* .item-wrapper{
-	background-color: #3f51b5;
-} */
+.item-thumbnail{
+	padding-top: 3px !important;
+}
 
 .movieContainer{
-	background-color: #f1f8e9;
+	background-color: $black;
 	height: 880px;
 }
 .sectionTitle{
@@ -134,9 +141,7 @@ h2{
 	height: 880px;
 }
 
-.rightTitle{
-	padding-top: 20px;
-}
+
 .page-footer{
 	background-color: $primary-color !important;
 	
@@ -155,10 +160,12 @@ h2{
 .card-panel{
 	padding: 10px;
 	height: 170px;
+	margin-top: -1px;
 }
 .card{
 	box-shadow: 0 0 0 0;
 }
+
 
 .repeat-list-item.ng-enter,
 .repeat-list-item.ng-leave,
@@ -232,4 +239,10 @@ h2{
 
 .card-date{
 	margin: 0;
+}
+.rightTitleText{
+	margin-top: 15px;
+}
+.detailInfo{
+	background-color: $white;
 }
