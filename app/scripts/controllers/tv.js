@@ -42,6 +42,7 @@ angular.module('entsearchApp')
 
   }).then(function successCallback(data){
     $scope.results= data;
+    $scope.searchTerm = "";
 
 
   },function errorCallback(){
